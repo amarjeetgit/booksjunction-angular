@@ -1,50 +1,35 @@
 
-<div>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-  <a class="navbar-brand" href="#">MyBookStore</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mr-auto" >
-      <li class="nav-item active">
-          <a class="nav-link" routerLink="" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Search Books By Categories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <button class="dropdown-item" (click)='homenav(1)' >Comedy</button>
-          <a class="dropdown-item" (click)='homenav(2)'>Biography</a>
-          <a class="dropdown-item" (click)='homenav(3)'>Romance</a>
-          <a class="dropdown-item" (click)='homenav(4)'>Sports</a>
-        </div>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li> <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a></li>
-    </ul>
-    <form class="form-inline my-2 my -lg-0 ">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit" >Search</button>
-    </form> 
+<app-header></app-header>
+
+  <div>heloooo</div>
+<div  style="height:400px;margin-bottom:10px">
+  <ul>
+    <li *ngFor="let a of result;" style="padding:20px">
+    <table border="1" width="500px" height="300px">
+    <tr>
+    <td>BookId- </td><td>{{ a.book_id }}</td>
+    </tr>
+    <tr>
+    <td>BookName- </td><td>{{ a.book_name }}</td>
+    </tr>
+    <tr>
+    <td>BookAuthor- </td><td>{{ a.author }}</td>
+    </tr>
+    <tr>
+    <td>BookPrice- </td><td>{{ a.price }}</td>
+    </tr>
+    <tr>
+    <td>BookLanguage- </td><td>{{ a.language }}</td>
+    </tr>
+    <tr>
+    <td>Description- </td><td>{{ a.description }}</td>
+    </tr>
+    <tr>
+    <td><button style="width:150px;background:red;"><a style="color:white" (click)='invalid()' href="">Add to WishList</a></button></td><td><button style="width:150px;background:blue;"><a style="color:white" href="" (click)='invalid()'>Add to Cart</a></button></td>
+    </tr>
+    </table></li>
+  </ul>
   </div>
-</nav>
-
-</div>
-
-<div>
-  <app-homesearch></app-homesearch>
-</div>
-  
-
 
 <!-- <div style="margin-left: 20%;height: auto;width: 60%" class="row">
       <div class="col-4"> 

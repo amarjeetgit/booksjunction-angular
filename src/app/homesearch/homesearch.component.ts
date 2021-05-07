@@ -7,7 +7,7 @@ import { DbserviceService } from '../dbservice.service';
 
 @Component({
   selector: 'app-homesearch',
-  template: './homesearch.component.html',
+  templateUrl: './homesearch.component.html',
   styleUrls: ['./homesearch.component.css']
 })
 export class HomesearchComponent implements OnInit {
@@ -20,6 +20,7 @@ export class HomesearchComponent implements OnInit {
   ngOnInit() {
     let value=parseInt(this.route.snapshot.paramMap.get('value'));
  // this.navvalue=value;
+ console.log("cxame");
   this.homenav(value);
   }
   //navvalue:number;
