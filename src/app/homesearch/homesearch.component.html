@@ -1,35 +1,11 @@
 
 <app-header></app-header>
 
-  <div>heloooo</div>
-<div  style="height:400px;margin-bottom:10px">
-  <ul>
-    <li *ngFor="let a of result;" style="padding:20px">
-    <table border="1" width="500px" height="300px">
-    <tr>
-    <td>BookId- </td><td>{{ a.book_id }}</td>
-    </tr>
-    <tr>
-    <td>BookName- </td><td>{{ a.book_name }}</td>
-    </tr>
-    <tr>
-    <td>BookAuthor- </td><td>{{ a.author }}</td>
-    </tr>
-    <tr>
-    <td>BookPrice- </td><td>{{ a.price }}</td>
-    </tr>
-    <tr>
-    <td>BookLanguage- </td><td>{{ a.language }}</td>
-    </tr>
-    <tr>
-    <td>Description- </td><td>{{ a.description }}</td>
-    </tr>
-    <tr>
-    <td><button style="width:150px;background:red;"><a style="color:white" (click)='invalid()' href="">Add to WishList</a></button></td><td><button style="width:150px;background:blue;"><a style="color:white" href="" (click)='invalid()'>Add to Cart</a></button></td>
-    </tr>
-    </table></li>
-  </ul>
-  </div>
+<div class="col-sm-6 col-6 col-lg-4 col-xl-4 list-product"  *ngFor="let data of result;">
+      <app-product-card [item]=data>
+
+      </app-product-card>
+</div>
 
 <!-- <div style="margin-left: 20%;height: auto;width: 60%" class="row">
       <div class="col-4"> 

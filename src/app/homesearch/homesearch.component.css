@@ -23,4 +23,8 @@ li {
     vertical-align: top;
 }
 
-  
+.list-product {
+  float: left;
+  height: 360px;
+  margin-top: 20px;
+}
