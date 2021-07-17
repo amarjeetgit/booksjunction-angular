@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Books } from './Books';
 // import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Customers } from './Customers';
@@ -11,18 +12,34 @@ import { Customers } from './Customers';
 })
 export class DbserviceService {
   
+  url:string;
+
+  constructor(private con:HttpClient) { 
+    
+    if(!environment.mockData){
+      let link ="/home/called";
+      this.url=environment.SERVER_PORT+link;
+    }
+    else
+    {
+      this.url=environment.mockUrl;
+    }
+  }
   
 
-  constructor(private con:HttpClient) { }
 
-url='http://localhost:8081';
-
-
-  servicecallbyid(value:any):Observable<Books>
+  servicecallbyid():Observable<any>
   {
     
-    let link ="/book_id/"+value;
-    return this.con.get<Books>(this.url+link);
+    //return this.con.get<Books>(this.url+link);
+    const headers = new HttpHeaders({
+      'Cache-Control': 'no-cache, no-store, must-revalidate, post-check=0, pre-check=0',
+      'Pragma': 'no-cache',
+      'Expires': '0'
+    });
+    const options = { headers: headers };
+
+    return this.con.get(this.url, options);
   }
 
 
