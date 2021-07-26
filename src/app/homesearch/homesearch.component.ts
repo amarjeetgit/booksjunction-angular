@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { Books } from '../Books';
 import { DbserviceService } from '../dbservice.service';
 
@@ -67,7 +68,7 @@ homenav(value:number)
   comedycollection()
     {
       this.result=[];
-      this.dbs.getJSON('./assets/widgets.json').subscribe(data => {
+      this.dbs.servicecallbyid().subscribe(data => {
         this.result = data;
     });
       console.log("Comedy Called");
@@ -77,7 +78,7 @@ homenav(value:number)
     biographycollection()
     {
       
-      this.dbs.getJSON('./assets/widgets.json').subscribe(data => {
+      this.dbs.servicecallbyid().subscribe(data => {
         this.result = data;
     });
       console.log("biography Called");
@@ -87,6 +88,15 @@ homenav(value:number)
     sportscollection()
     {
       this.result=[];
+      this.dbs.servicecallbyid().subscribe(data=>{
+        if(data && !environment.mockData){
+          alert(data.status);
+          this.result=data.values;
+        }
+        else{
+          this.result=data;
+        }
+      });
       console.log("Sports Called");
     }
     romancecollection()

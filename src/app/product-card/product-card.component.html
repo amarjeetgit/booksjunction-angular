@@ -1,23 +1,43 @@
-<table border="1" width="400px" height="300px">
+<div>
+<div class="product">
+  <div class="front" id="front">
+  <table>
   <tr>
-  <td>BookId- </td><td>{{ item.book_id }}</td>
-  </tr>
-  <tr>
-  <td>BookName- </td><td>{{ item.book_name }}</td>
-  </tr>
-  <tr>
-  <td>BookAuthor- </td><td>{{ item.author }}</td>
-  </tr>
-  <tr>
-  <td>BookPrice- </td><td>{{ item.price }}</td>
-  </tr>
-  <tr>
-  <td>BookLanguage- </td><td>{{ item.language }}</td>
-  </tr>
-  <tr>
-  <td>Description- </td><td>{{ item.description }}</td>
-  </tr>
-  <tr>
-  <td><button style="width:150px;background:red;"><a style="color:white" (click)='invalid()' href="">Add to WishList</a></button></td><td><button style="width:150px;background:blue;"><a style="color:white" href="" (click)='invalid()'>Add to Cart</a></button></td>
+    <td><img class="imagesize"  src={{item?.bookimageurl}}></td>
   </tr>
   </table>
+  </div>
+  
+  <div class="back">
+    <table class="back-table">
+          <!-- <tr>
+          <td>BookId- </td><td>{{ item.bookid }}</td>
+          </tr> -->
+          <tr>
+          <td></td><td>{{ item.title }}</td>
+          </tr>
+          <tr>
+          <td>Author- </td><td>{{ item.author }}</td>
+          </tr>
+          <tr>
+          <td>Price- </td><td>{{ item.price }}</td>
+          </tr>
+          <tr>
+          <td>Language- </td><td>{{ item.language }}</td>
+          </tr>
+          <tr>
+          <td>Description- </td><td>{{ item.description }}</td>
+          </tr>
+    </table>
+  </div>
+  
+</div>
+<div class="buttons">
+  <table>
+  <tr>
+    <td ><button class="btn btn-primary" ><a style="color:white" (click)='invalid()' href="">Add to WishList</a></button></td>
+    <td> <button class="btn btn-success" ><a style="color:white" href="" (click)='invalid()'>Add to Cart</a></button></td>
+    </tr>
+  </table>
+</div>
+</div>
