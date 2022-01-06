@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  mockData: true,
-  SERVER_PORT : ""
+  mockData: false,
+  SERVER_PORT: ""
 };
 
 /*
