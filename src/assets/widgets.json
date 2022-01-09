@@ -1,49 +1,49 @@
 [
     {
-        "book_id" : "AM32",
-        "book_name" : "AMERICAN TOURISTER CABIN LUGGAGE TROLLY",
-        "productCategories" : [],
-        "price" : 9843,
-        "imageUrl": "SCR000_14.jpg",
+        "book_id": "AM32",
+        "book_name": "AMERICAN TOURISTER CABIN LUGGAGE TROLLY",
+        "productCategories": [],
+        "price": 9843,
+        "imageUrl": "2states.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "CF45",
-        "book_name" : "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
-        "productCategories" : [],
-        "price" : 24031,
+        "book_id": "CF45",
+        "book_name": "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
+        "productCategories": [],
+        "price": 24031,
         "imageUrl": "SCR000_2.jpg",
         "countryCode": "HK"
     },
-    {  
-        "book_id" : "AG25",
-        "book_name" : "WILDCRAFT SLINGS - ZERO BAG",
-        "productCategories" : [],
-        "price" : 10403,
+    {
+        "book_id": "AG25",
+        "book_name": "WILDCRAFT SLINGS - ZERO BAG",
+        "productCategories": [],
+        "price": 10403,
         "imageUrl": "SCR000_5.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "KD87",
-        "book_name" : "VICTORINOX CHRONO CLASSIC2-TONE",
-        "productCategories" : [],
-        "price" : 2403,
+        "book_id": "KD87",
+        "book_name": "VICTORINOX CHRONO CLASSIC2-TONE",
+        "productCategories": [],
+        "price": 2403,
         "imageUrl": "SCR000_3.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "BI86",
-        "book_name" : "PORTRONICS SOUND CAKE PORTABLE SPEAKER",
-        "productCategories" : [],
-        "price" : 3467,
+        "book_id": "BI86",
+        "book_name": "PORTRONICS SOUND CAKE PORTABLE SPEAKER",
+        "productCategories": [],
+        "price": 3467,
         "imageUrl": "SCR000_1.jpg",
         "countryCode": "IN"
     },
     {
-        "book_id" : "SK56",
-        "book_name" : "Bowers & Wilkins FP33510 P3 Headphone (Black/Grey)",
-        "productCategories" : [],
-        "price" : 7345,
+        "book_id": "SK56",
+        "book_name": "Bowers & Wilkins FP33510 P3 Headphone (Black/Grey)",
+        "productCategories": [],
+        "price": 7345,
         "imageUrl": "SCR000_13.jpg",
         "countryCode": "IN"
     },
@@ -56,74 +56,74 @@
         "countryCode": "IN"
     },
     {
-        "book_id" : "IO34",
-        "book_name" : "Wireless Bluetooth Headphone ",
-        "productCategories" : [],
-        "price" : 5403,
+        "book_id": "IO34",
+        "book_name": "Wireless Bluetooth Headphone ",
+        "productCategories": [],
+        "price": 5403,
         "imageUrl": "SCR000_4.jpg",
         "countryCode": "IN"
     },
     {
-        "book_id" : "p9",
-        "book_name" : "Wireless Bluetooth Headphone ",
-        "productCategories" : [],
-        "price" : 5403,
+        "book_id": "p9",
+        "book_name": "Wireless Bluetooth Headphone ",
+        "productCategories": [],
+        "price": 5403,
         "imageUrl": "SCR000_4.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "p2",
-        "book_name" : "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
-        "productCategories" : [],
-        "price" : 24031,
+        "book_id": "p2",
+        "book_name": "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
+        "productCategories": [],
+        "price": 24031,
         "imageUrl": "SCR000_2.jpg",
         "countryCode": "IN"
     },
     {
-        "book_id" : "AM32",
-        "book_name" : "AMERICAN TOURISTER CABIN LUGGAGE TROLLY",
-        "productCategories" : [],
-        "price" : 9843,
+        "book_id": "AM32",
+        "book_name": "AMERICAN TOURISTER CABIN LUGGAGE TROLLY",
+        "productCategories": [],
+        "price": 9843,
         "imageUrl": "SCR000_14.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "CF45",
-        "book_name" : "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
-        "productCategories" : [],
-        "price" : 24031,
+        "book_id": "CF45",
+        "book_name": "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
+        "productCategories": [],
+        "price": 24031,
         "imageUrl": "SCR000_2.jpg",
         "countryCode": "HK"
     },
-    {  
-        "book_id" : "AG25",
-        "book_name" : "WILDCRAFT SLINGS - ZERO BAG",
-        "productCategories" : [],
-        "price" : 10403,
+    {
+        "book_id": "AG25",
+        "book_name": "WILDCRAFT SLINGS - ZERO BAG",
+        "productCategories": [],
+        "price": 10403,
         "imageUrl": "SCR000_5.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "KD87",
-        "book_name" : "VICTORINOX CHRONO CLASSIC2-TONE",
-        "productCategories" : [],
-        "price" : 2403,
+        "book_id": "KD87",
+        "book_name": "VICTORINOX CHRONO CLASSIC2-TONE",
+        "productCategories": [],
+        "price": 2403,
         "imageUrl": "SCR000_3.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "BI86",
-        "book_name" : "PORTRONICS SOUND CAKE PORTABLE SPEAKER",
-        "productCategories" : [],
-        "price" : 3467,
+        "book_id": "BI86",
+        "book_name": "PORTRONICS SOUND CAKE PORTABLE SPEAKER",
+        "productCategories": [],
+        "price": 3467,
         "imageUrl": "SCR000_1.jpg",
         "countryCode": "IN"
     },
     {
-        "book_id" : "SK56",
-        "book_name" : "Bowers & Wilkins FP33510 P3 Headphone (Black/Grey)",
-        "productCategories" : [],
-        "price" : 7345,
+        "book_id": "SK56",
+        "book_name": "Bowers & Wilkins FP33510 P3 Headphone (Black/Grey)",
+        "productCategories": [],
+        "price": 7345,
         "imageUrl": "SCR000_13.jpg",
         "countryCode": "IN"
     },
@@ -136,28 +136,27 @@
         "countryCode": "IN"
     },
     {
-        "book_id" : "IO34",
-        "book_name" : "Wireless Bluetooth Headphone ",
-        "productCategories" : [],
-        "price" : 5403,
+        "book_id": "IO34",
+        "book_name": "Wireless Bluetooth Headphone ",
+        "productCategories": [],
+        "price": 5403,
         "imageUrl": "SCR000_4.jpg",
         "countryCode": "IN"
     },
     {
-        "book_id" : "p9",
-        "book_name" : "Wireless Bluetooth Headphone ",
-        "productCategories" : [],
-        "price" : 5403,
+        "book_id": "p9",
+        "book_name": "Wireless Bluetooth Headphone ",
+        "productCategories": [],
+        "price": 5403,
         "imageUrl": "SCR000_4.jpg",
         "countryCode": "HK"
     },
     {
-        "book_id" : "p2",
-        "book_name" : "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
-        "productCategories" : [],
-        "price" : 24031,
+        "book_id": "p2",
+        "book_name": "SONY OPEN EAR ACTIVE SPORTS HEADPHONES",
+        "productCategories": [],
+        "price": 24031,
         "imageUrl": "SCR000_2.jpg",
         "countryCode": "IN"
     }
-
 ]

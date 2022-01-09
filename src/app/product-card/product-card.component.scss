@@ -1,0 +1,50 @@
+.product{
+    position: relative;
+    background-color: #98e7ff;
+    width:250px;
+    border: black;
+}
+
+.imagesize{
+    height:300px ;
+    width:250px;
+}
+
+.buttons{
+    
+}
+.front:hover{
+    .imagesize{
+        position: absolute;
+        width: 3px;
+        height: 300px;
+        // top:20%;
+        transition:  all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -webkit-transition:  all 0.4s ease-in-out 0s;
+        -o-transition:  all 0.4s ease-in-out 0s;
+        
+    }
+    ~ .back{
+    position: relative;
+    opacity: 1;
+    margin-left: 1px;
+    background-color: #98e7ff;
+    }
+}
+
+.front{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    z-index: 30;
+    
+}
+
+.back{
+    width: 250px;
+    height: 300px;
+    position: relative;
+     z-index: 20;
+     opacity: 0;
+}
