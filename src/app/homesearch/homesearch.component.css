@@ -28,3 +28,13 @@ li {
   height: 360px;
   margin-top: 20px;
 }
+
+
+.wishlisticon{
+  height:30px ;
+  width:25px;
+}
+.wishlistbutton{
+  height: 50px;
+  width: 100px;
+}
