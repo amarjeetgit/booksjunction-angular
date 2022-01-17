@@ -1,29 +1,31 @@
 <app-header></app-header>
 
-<div class="col-sm-6 col-6 col-lg-4 col-xl-4 list-product" *ngFor="let data of result;">
-  <app-product-card [item]=data>
+<div style="margin-left: 100px;">
+  <div class="list-product" *ngFor="let data of result;">
+    <app-product-card [item]=data>
 
-  </app-product-card>
-  <div class="buttons">
-    <table>
-      <tr class="row" style="width: 250px;">
-        <td class="col-6" style="text-align: right;">
-          <button class="btn shadow-none" style="height: 50px;width: 115px;background-color: white;outline: none;"
-            (click)='invalid()'>
-            <img *ngIf="!wishlisted" style="text-align: center;" class="wishlisticon"
-              src="assets/pictures/pngfind.com-love-symbols-png-248074.png">
-            <img *ngIf="wishlisted" style="text-align: center;" class="wishlisticon"
-              src="assets/pictures/heart_red.png">
-          </button>
-          <!-- <button class="btn btn-primary" (click)='invalid()'>
+    </app-product-card>
+    <div class="buttons">
+      <table>
+        <tr class="row" style="width: 250px;">
+          <td class="col-6" style="text-align: right;">
+            <button class="btn shadow-none" style="height: 50px;width: 115px;background-color: white;outline: none;"
+              (click)='invalid()'>
+              <img *ngIf="!wishlisted" style="text-align: center;" class="wishlisticon"
+                src="assets/pictures/pngfind.com-love-symbols-png-248074.png">
+              <img *ngIf="wishlisted" style="text-align: center;" class="wishlisticon"
+                src="assets/pictures/heart_red.png">
+            </button>
+            <!-- <button class="btn btn-primary" (click)='invalid()'>
             
           </button> -->
-        </td>
-        <td class="col-6"><button class="btn btn-success" style="height: 50px;width: 125px;">
-            <a style="color:white" (click)='invalid()' href="">Add to Cart</a>
-          </button>
-        </td>
-      </tr>
-    </table>
+          </td>
+          <td class="col-6"><button class="btn btn-success" style="height: 50px;width: 125px;">
+              <a style="color:white" (click)='invalid()' href="">Add to Cart</a>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>

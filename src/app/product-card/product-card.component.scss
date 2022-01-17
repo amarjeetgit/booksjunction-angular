@@ -16,7 +16,7 @@
 .front:hover{
     .imagesize{
         position: absolute;
-        width: 0px;
+        width: 120px;
         height: 300px;
         // top:20%;
         transition:  all 0.4s ease-in-out 0s;
@@ -28,7 +28,7 @@
     ~ .back{
     position: relative;
     opacity: 1;
-    margin-left: 1px;
+    margin-left: 125px;
    // background-color: #fffafa;
     }
 }

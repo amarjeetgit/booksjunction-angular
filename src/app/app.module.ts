@@ -11,10 +11,18 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomesearchComponent } from './homesearch/homesearch.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { UserprofileComponent } from './useraccount/userprofile/userprofile.component';
+import { OrderlistComponent } from './useraccount/orderlist/orderlist.component';
+import { OrderdetailsComponent } from './useraccount/orderdetails/orderdetails.component';
+import { WishlistComponent } from './useraccount/wishlist/wishlist.component';
+import { HelpComponent } from './useraccount/help/help.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HomepageComponent, HeaderComponent, FooterComponent,AboutComponent,ContactusComponent,HomesearchComponent, ProductCardComponent
+    AppComponent,HomepageComponent, HeaderComponent, FooterComponent,AboutComponent,ContactusComponent,HomesearchComponent, ProductCardComponent, LoginpageComponent, UserprofileComponent, OrderlistComponent, OrderdetailsComponent, WishlistComponent, HelpComponent, ProductdetailsComponent, CartdetailsComponent
   ],
   imports: [
     BrowserModule,
