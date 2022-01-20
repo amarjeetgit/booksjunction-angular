@@ -26,28 +26,28 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact Us</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Categories
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" (click)='homenav(1)'>Comedy</a>
-            <a class="dropdown-item" (click)='homenav(2)'>Biography</a>
-            <a class="dropdown-item" (click)='homenav(3)'>Romance</a>
-            <a class="dropdown-item" (click)='homenav(4)'>Sports</a>
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn" style="color: white;" id="dropdownBasic1" ngbDropdownToggle>Categories
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a (click)='homenav(1)' ngbDropdownItem>Comedy</a>
+              <a (click)='homenav(2)' ngbDropdownItem>Biography</a>
+              <a (click)='homenav(3)' ngbDropdownItem>Romance</a>
+              <a (click)='homenav(4)' ngbDropdownItem>Sports</a>
+            </div>
           </div>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            My Account
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" routerLink="/userprofile">My Profile</a>
-            <a class="dropdown-item" routerLink="/orderlist">Orders</a>
-            <a class="dropdown-item" routerLink="/wishlist">Wishlist</a>
-            <a class="dropdown-item" routerLink="/help">Help</a>
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn" style="color: white;" id="dropdownBasic1" ngbDropdownToggle>My
+              Account</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a routerLink="/userprofile" ngbDropdownItem>My Profile</a>
+              <a routerLink="/orderlist" ngbDropdownItem>Orders</a>
+              <a routerLink="/wishlist" ngbDropdownItem>Wishlist</a>
+              <a routerLink="/help" ngbDropdownItem>Help</a>
+            </div>
           </div>
         </li>
       </ul>

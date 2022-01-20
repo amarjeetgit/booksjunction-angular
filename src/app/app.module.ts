@@ -19,6 +19,7 @@ import { WishlistComponent } from './useraccount/wishlist/wishlist.component';
 import { HelpComponent } from './useraccount/help/help.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CartdetailsComponent } from './cartdetails/cartdetails.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
