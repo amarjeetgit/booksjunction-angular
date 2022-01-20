@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -8,19 +8,14 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor(public r:Router) { 
-
-    
-  }
-
+  constructor(public r: Router) { }
   ngOnInit() {
+
   }
-  check()
-  {
+  check() {
     this.r.navigate(['contact']);
   }
-  homenav(value:any)
-  {
-    this.r.navigate(['homesearch',value]);
+  homenav(value: any) {
+    this.r.navigate(['homesearch', value]);
   }
 }
