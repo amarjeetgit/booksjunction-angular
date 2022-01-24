@@ -56,8 +56,8 @@
           <a class="nav-link" routerLink="/">Cart <img class="carticon" src="assets/pictures/cart3.png"></a>
         </li>
         <li>
-          <a *ngIf="loggedin=='false'" class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-          <a *ngIf="loggedin=='true'" class="nav-link" (click)="logout()" routerLinkActive="active">Logout</a>
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+          <!-- <a *ngIf="loggedin=='true'" class="nav-link" (click)="logout()" routerLinkActive="active">Logout</a> -->
         </li>
       </ul>
       <form class="form-inline my-2 my -lg-0 ">

@@ -5,7 +5,10 @@
 export const environment = {
   production: false,
   mockData: true,
-  SERVER_PORT: ""
+  SERVER_PORT: "",
+  mock_SERVER_PORT: "",
+
+
 };
 
 /*

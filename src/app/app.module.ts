@@ -20,16 +20,18 @@ import { HelpComponent } from './useraccount/help/help.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,HomepageComponent, HeaderComponent, FooterComponent,AboutComponent,ContactusComponent,HomesearchComponent, ProductCardComponent, LoginpageComponent, UserprofileComponent, OrderlistComponent, OrderdetailsComponent, WishlistComponent, HelpComponent, ProductdetailsComponent, CartdetailsComponent
+    AppComponent, HomepageComponent, HeaderComponent, FooterComponent, AboutComponent, ContactusComponent, HomesearchComponent, ProductCardComponent, LoginpageComponent, UserprofileComponent, OrderlistComponent, OrderdetailsComponent, WishlistComponent, HelpComponent, ProductdetailsComponent, CartdetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
