@@ -28,13 +28,12 @@ export class LoginpageComponent implements OnInit {
   }
   login() {
     if (this.util.env.mockData) {
-      console.log("Login using mock data");
+      console.log("mock data");
     }
     else {
-      console.log("Login using real data");
+      console.log("Real data");
     }
-    console.log(this.username);
-    console.log(this.password);
+
   }
   register() {
     console.log("registering");
