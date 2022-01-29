@@ -5,6 +5,13 @@
 
 
   <div class="panel panel-info col-6">
+    <div *ngIf="loggedin" style="display: inline-flex;">
+      <span>
+        <h5>Hi, </h5>
+      </span><span>
+        <h3> {{currentUserInfo.name}}</h3>
+      </span>
+    </div>
     <div class="panel-heading">Welcome to <span
         style="color:red; text-decoration-line: underline;text-decoration-color: black;font-family: cursive">
         BooksJunction</span> </div>

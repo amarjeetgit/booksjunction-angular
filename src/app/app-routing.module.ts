@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { CartdetailsComponent } from './cartdetails/cartdetails.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HomesearchComponent } from './homesearch/homesearch.component';
@@ -11,8 +12,10 @@ import { OrderlistComponent } from './useraccount/orderlist/orderlist.component'
 import { UserprofileComponent } from './useraccount/userprofile/userprofile.component';
 import { WishlistComponent } from './useraccount/wishlist/wishlist.component';
 
-const routes: Routes = [{ path: '', pathMatch: 'full', component: HomepageComponent },
+export const routes: Routes = [{ path: '', pathMatch: 'full', component: HomepageComponent },
+{ path: 'cart', component: CartdetailsComponent },
 { path: 'about', component: AboutComponent },
+{ path: 'home', component: HomepageComponent },
 { path: 'login', component: LoginpageComponent },
 { path: 'contact', component: ContactusComponent },
 { path: 'help', component: HelpComponent },

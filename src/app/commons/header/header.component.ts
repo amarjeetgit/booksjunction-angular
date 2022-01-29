@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Customers } from 'src/app/Customers';
+import { UtilMethods } from 'src/app/Utilities/util-methods';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +10,24 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public r: Router) { }
-  loggedin: string;
+  constructor(public r: Router, public util: UtilMethods) { }
+  loggedin: boolean;
+  currentUserInfo: Customers;
   ngOnInit() {
+    this.checkdata();
   }
+  checkdata() {
+    this.util.checkdata();
+    this.currentUserInfo = this.util.currentUserInfo;
+    this.loggedin = this.util.loggedin;
+  }
+
   homenav(value: any) {
     this.r.navigate(['homesearch', value]);
   }
-  logout() {
 
+  logout() {
+    this.loggedin = false;
+    sessionStorage.removeItem('user');
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Books } from '../Books';
+import { Customers } from '../Customers';
 import { DbserviceService } from '../dbservice.service';
 
 
@@ -118,6 +119,20 @@ export class HomesearchComponent implements OnInit {
       }
 
     }
+  }
+  check() {
+    alert("ok");
+    let c = new Customers();
+    console.log(c);
+  }
+  check1() {
+    alert("ok");
+  }
+  check2() {
+    alert("ok");
+  }
+  check3() {
+    alert("ok");
   }
 
 }

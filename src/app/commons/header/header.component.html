@@ -53,11 +53,17 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Cart <img class="carticon" src="assets/pictures/cart3.png"></a>
+          <a class="nav-link" routerLink="/wishlist"><img class="carticon"
+              src="assets/pictures/pngfind.com-love-symbols-png-248074.png"><span class="wish-number"
+              *ngIf="loggedin">{{currentUserInfo.totalWishlisted}}</span></a>
         </li>
-        <li>
-          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-          <!-- <a *ngIf="loggedin=='true'" class="nav-link" (click)="logout()" routerLinkActive="active">Logout</a> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cart"><img class="carticon" src="assets/pictures/cart3.png"><span
+              class="cart-number" *ngIf="loggedin">{{currentUserInfo.totalInCart}}</span></a>
+        </li>
+        <li class="loginButton">
+          <a *ngIf="!loggedin" class="nav-link" routerLink="/login">Login</a>
+          <a *ngIf="loggedin" class="nav-link" (click)="logout()">Logout</a>
         </li>
       </ul>
       <form class="form-inline my-2 my -lg-0 ">

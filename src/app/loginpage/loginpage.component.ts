@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Customers } from '../Customers';
+import { DbserviceService } from '../dbservice.service';
+import { LoginServiceService } from '../services/login/login-service.service';
 import { UtilMethods } from '../Utilities/util-methods';
 
 @Component({
@@ -8,7 +12,7 @@ import { UtilMethods } from '../Utilities/util-methods';
 })
 export class LoginpageComponent implements OnInit {
 
-  constructor(public util: UtilMethods) { }
+  constructor(public util: UtilMethods, private loginservice: LoginServiceService, public router: Router, private dbService: DbserviceService) { }
   loggedIn: boolean = false;
   loginPageEnabled: boolean = true;
   username: string;
@@ -29,11 +33,25 @@ export class LoginpageComponent implements OnInit {
   login() {
     if (this.util.env.mockData) {
       console.log("mock data");
+      let user: Customers;
+      this.dbService.getJSON('./assets/users.json').subscribe(data => {
+        user = data[0];
+        console.log(user);
+        if (user.email == this.username && user.password == this.password) {
+          console.log("data is correct")
+          sessionStorage.setItem("user", JSON.stringify(user));
+          this.router.navigateByUrl('/home');
+        }
+        else {
+          alert("Password/Username are incorrect");
+        }
+      });
     }
     else {
-      console.log("Real data");
+      console.log("backend data calling");
+      return null;
     }
-
+    return null;
   }
   register() {
     console.log("registering");
