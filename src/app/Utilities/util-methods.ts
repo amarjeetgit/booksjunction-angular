@@ -1,4 +1,6 @@
-import { Injectable, OnInit } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
+import { Inject, Injectable, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { environment } from '../../environments/environment';
 import { Customers } from "../Customers";
 
@@ -9,7 +11,7 @@ export class UtilMethods implements OnInit {
     public env = environment;
     currentUserInfo: Customers;
     loggedin: boolean;
-    constructor() { }
+    constructor(private r: Router, @Inject(DOCUMENT) private document: Document) { }
 
     ngOnInit() {
     }
@@ -21,6 +23,12 @@ export class UtilMethods implements OnInit {
             this.currentUserInfo = currentUser;
             this.loggedin = true;
         }
+
+    }
+
+    logout() {
+        sessionStorage.removeItem('user');
+        this.document.location.href = '/home';
 
     }
 }

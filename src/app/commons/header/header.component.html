@@ -18,13 +18,13 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+          <a class="nav-link" style="color: white;" href="#">Home <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about">About Us</a>
+          <a class="nav-link" style="color: white;" routerLink="/about">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact Us</a>
+          <a class="nav-link" style="color: white;" routerLink="/contact">Contact Us</a>
         </li>
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
@@ -52,24 +52,24 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
+        <form class="form-inline my-2 my -lg-0 ">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <li *ngIf="loggedin" class="nav-item">
           <a class="nav-link" routerLink="/wishlist"><img class="carticon"
               src="assets/pictures/pngfind.com-love-symbols-png-248074.png"><span class="wish-number"
               *ngIf="loggedin">{{currentUserInfo.totalWishlisted}}</span></a>
         </li>
-        <li class="nav-item">
+        <li *ngIf="loggedin" class="nav-item">
           <a class="nav-link" routerLink="/cart"><img class="carticon" src="assets/pictures/cart3.png"><span
               class="cart-number" *ngIf="loggedin">{{currentUserInfo.totalInCart}}</span></a>
         </li>
         <li class="loginButton">
-          <a *ngIf="!loggedin" class="nav-link" routerLink="/login">Login</a>
-          <a *ngIf="loggedin" class="nav-link" (click)="logout()">Logout</a>
+          <a role="button" style="color: white;" *ngIf="!loggedin" class="nav-link" routerLink="/login">Login</a>
+          <a role="button" style="color: white;" *ngIf="loggedin" class="nav-link" (click)="logout()">Logout</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my -lg-0 ">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>
 

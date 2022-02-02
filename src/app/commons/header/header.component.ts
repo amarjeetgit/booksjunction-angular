@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Customers } from 'src/app/Customers';
 import { UtilMethods } from 'src/app/Utilities/util-methods';
@@ -11,11 +11,13 @@ import { UtilMethods } from 'src/app/Utilities/util-methods';
 export class HeaderComponent implements OnInit {
 
   constructor(public r: Router, public util: UtilMethods) { }
+
   loggedin: boolean;
   currentUserInfo: Customers;
   ngOnInit() {
     this.checkdata();
   }
+
   checkdata() {
     this.util.checkdata();
     this.currentUserInfo = this.util.currentUserInfo;
@@ -27,7 +29,6 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.loggedin = false;
-    sessionStorage.removeItem('user');
+    this.util.logout();
   }
 }

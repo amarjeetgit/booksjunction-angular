@@ -1,3 +1,5 @@
 <app-header></app-header>
-Name: {{currentUserInfo.name}}
-Address: {{currentUserInfo.address}}
+<div *ngIf="loggedin">
+  Name: {{currentUserInfo.name}}
+  Address: {{currentUserInfo.address}}
+</div>

@@ -54,6 +54,32 @@ export class LoginpageComponent implements OnInit {
     return null;
   }
   register() {
-    console.log("registering");
+    let body = [
+      {
+        "name": "Amarjeet Nirala",
+        "mobile": "8757018722",
+        "email": "abc@gmail.com",
+        "address": "Bangalore",
+        "password": "12345611",
+        "custId": "amar321",
+        "totalWishlisted": 4,
+        "totalInCart": 8,
+        "wishlisted": [
+          {}
+        ],
+        "inCart": [
+          {}
+        ]
+      }
+    ];
+    var wf = require('write-file');
+    wf('./assets/test.json', { foo: 'bar' }, function (err) {
+      console.log("registering");
+    })
+    // this.dbService.setJson('./assets/', body).subscribe(data => {
+
+    //   console.log("registering");
+    // });
+
   }
 }
