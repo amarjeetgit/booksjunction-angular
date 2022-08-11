@@ -72,14 +72,14 @@ export class LoginpageComponent implements OnInit {
         ]
       }
     ];
-    var wf = require('write-file');
-    wf('./assets/test.json', { foo: 'bar' }, function (err) {
-      console.log("registering");
-    })
-    // this.dbService.setJson('./assets/', body).subscribe(data => {
-
+    // var wf = require('write-file');
+    // wf('./assets/test.json', { foo: 'bar' }, function (err) {
     //   console.log("registering");
-    // });
+    // })
+    this.dbService.setJson('./assets/', body).subscribe(data => {
+
+      console.log("registering");
+    });
 
   }
 }
