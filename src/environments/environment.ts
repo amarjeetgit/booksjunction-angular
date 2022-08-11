@@ -5,10 +5,8 @@
 export const environment = {
   production: false,
   mockData: true,
-  SERVER_PORT: "",
-  mock_SERVER_PORT: "",
-
-
+  SERVER_PORT: "http://localhost:9292",
+  mockUrl: "./assets/widgets.json"
 };
 
 /*

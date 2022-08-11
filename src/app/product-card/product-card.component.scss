@@ -1,50 +1,52 @@
-.product{
+.product {
     position: relative;
     //background-color: #98e7ff;
-    width:250px;
+    width: 250px;
     border: black;
 }
 
-.imagesize{
-    height:300px ;
-    width:250px;
+.imagesize {
+    height: 300px;
+    width: 250px;
 }
 
-.buttons{
+.buttons {
     z-index: 100;
 }
-.front:hover{
-    .imagesize{
+
+.front:hover {
+    .imagesize {
         position: absolute;
         width: 120px;
         height: 300px;
         // top:20%;
-        transition:  all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
         -moz-transition: all 0.4s ease-in-out 0s;
-        -webkit-transition:  all 0.4s ease-in-out 0s;
-        -o-transition:  all 0.4s ease-in-out 0s;
-        
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -o-transition: all 0.4s ease-in-out 0s;
+
     }
-    ~ .back{
-    position: relative;
-    opacity: 1;
-    margin-left: 125px;
-   // background-color: #fffafa;
+
+    ~.back {
+        position: relative;
+        opacity: 1;
+        margin-left: 125px;
+        // background-color: #fffafa;
     }
 }
 
-.front{
+.front {
     width: 250px;
     height: 300px;
     position: absolute;
     z-index: 30;
-    
+
 }
 
-.back{
+.back {
     width: 250px;
     height: 300px;
     position: relative;
-     z-index: 20;
-     opacity: 0;
+    z-index: 20;
+    opacity: 0;
 }
