@@ -1,43 +1,42 @@
-<div>
-<div class="product">
-  <div class="front" id="front">
-  <table>
-  <tr>
-    <td><img class="imagesize"  src={{item?.bookimageurl}}></td>
-  </tr>
-  </table>
+<div style=" border: solid 1px black;">
+  <div class="product">
+    <div class="front" id="front">
+      <table>
+        <tr>
+          <td><img class="imagesize" src="assets/pictures/2states.jpg">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="back">
+      <table class="back-table">
+        <!-- <tr>
+            <td>BookId- </td><td>{{ item.bookid }}</td>
+            </tr> -->
+        <tr>
+          <td></td>
+          <td>{{ item.title }}</td>
+        </tr>
+        <tr>
+          <td>Author- </td>
+          <td>{{ item.author }}</td>
+        </tr>
+        <tr>
+          <td>Price- </td>
+          <td>{{ item.price }}</td>
+        </tr>
+        <tr>
+          <td>Language- </td>
+          <td>{{ item.language }}</td>
+        </tr>
+        <tr>
+          <td>Description- </td>
+          <td>{{ item.description }}</td>
+        </tr>
+      </table>
+      <br><br><br><br><br>
+    </div>
+
   </div>
-  
-  <div class="back">
-    <table class="back-table">
-          <!-- <tr>
-          <td>BookId- </td><td>{{ item.bookid }}</td>
-          </tr> -->
-          <tr>
-          <td></td><td>{{ item.title }}</td>
-          </tr>
-          <tr>
-          <td>Author- </td><td>{{ item.author }}</td>
-          </tr>
-          <tr>
-          <td>Price- </td><td>{{ item.price }}</td>
-          </tr>
-          <tr>
-          <td>Language- </td><td>{{ item.language }}</td>
-          </tr>
-          <tr>
-          <td>Description- </td><td>{{ item.description }}</td>
-          </tr>
-    </table>
-  </div>
-  
-</div>
-<div class="buttons">
-  <table>
-  <tr>
-    <td ><button class="btn btn-primary" ><a style="color:white"  href="">Add to WishList</a></button></td>
-    <td> <button class="btn btn-success" ><a style="color:white" href="">Add to Cart</a></button></td>
-    </tr>
-  </table>
-</div>
 </div>

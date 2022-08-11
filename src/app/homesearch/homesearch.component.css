@@ -1,4 +1,4 @@
- .col-12{
+ /* .col-12{
     width: 200px;
     border: 1px solid green;
     height: 210px;
@@ -13,9 +13,24 @@
     padding: 10px;
     
     
-  }
+  } */
 
- 
+ .row{
+   flex-wrap: nowrap;
+ }
+ .container{
+   margin:10px;
+   max-width: 1600px;
+ }
+
+ .panel-left{
+   margin-top: 50px;;
+ }
+
+.filter-header{
+height: 40px;
+
+}
 
 li {
  
@@ -27,4 +42,17 @@ li {
   float: left;
   height: 360px;
   margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+}
+
+
+.wishlisticon{
+  height:30px ;
+  width:25px;
+}
+.wishlistbutton{
+  height: 50px;
+  width: 100px;
 }

@@ -5,47 +5,72 @@
         <h1 class="mt-0 mb-3 text-blue">BooksJunction</h1>
         <span style="font-family: cursive;font-style: italic">(Keep Reading, Keep Sharing)</span>
       </div>
-      
+
     </div>
   </div>
-  </section>
+</section>
 <div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-  <a class="navbar-brand" href="#">MyBookStore</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mr-auto" >
-      <li class="nav-item active">
-          <a class="nav-link" >Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Categories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" (click)='homenav(1)'>Comedy</a>
-          <a class="dropdown-item" (click)='homenav(2)'>Biography</a>
-          <a class="dropdown-item" (click)='homenav(3)'>Romance</a>
-          <a class="dropdown-item" (click)='homenav(4)'>Sports</a>
-        </div>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li> <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a></li>
-    </ul>
-    <form class="form-inline my-2 my -lg-0 ">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit" >Search</button>
-    </form> 
-  </div>
-</nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" style="color: white;" href="#">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" routerLink="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" routerLink="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn" style="color: white;" id="dropdownBasic1" ngbDropdownToggle>Categories
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a (click)='homenav(1)' ngbDropdownItem>Comedy</a>
+              <a (click)='homenav(2)' ngbDropdownItem>Biography</a>
+              <a (click)='homenav(3)' ngbDropdownItem>Romance</a>
+              <a (click)='homenav(4)' ngbDropdownItem>Sports</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn" style="color: white;" id="dropdownBasic1" ngbDropdownToggle>My
+              Account</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <a routerLink="/userprofile" ngbDropdownItem>My Profile</a>
+              <a routerLink="/orderlist" ngbDropdownItem>Orders</a>
+              <a routerLink="/wishlist" ngbDropdownItem>Wishlist</a>
+              <a routerLink="/help" ngbDropdownItem>Help</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <form class="form-inline my-2 my -lg-0 ">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <li *ngIf="loggedin" class="nav-item">
+          <a class="nav-link" routerLink="/wishlist"><img class="carticon"
+              src="assets/pictures/pngfind.com-love-symbols-png-248074.png"><span class="wish-number"
+              *ngIf="loggedin">{{currentUserInfo.totalWishlisted}}</span></a>
+        </li>
+        <li *ngIf="loggedin" class="nav-item">
+          <a class="nav-link" routerLink="/cart"><img class="carticon" src="assets/pictures/cart3.png"><span
+              class="cart-number" *ngIf="loggedin">{{currentUserInfo.totalInCart}}</span></a>
+        </li>
+        <li class="loginButton">
+          <a role="button" style="color: white;" *ngIf="!loggedin" class="nav-link" routerLink="/login">Login</a>
+          <a role="button" style="color: white;" *ngIf="loggedin" class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 </div>

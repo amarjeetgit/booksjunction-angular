@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Amarjeet",
+        "mobile": "8757018722",
+        "email": "abc@gmail.com",
+        "address": "Bangalore",
+        "password": "12345611",
+        "custId": "amar321",
+        "totalWishlisted": 4,
+        "totalInCart": 8,
+        "wishlisted": [
+            {}
+        ],
+        "inCart": [
+            {}
+        ]
+    }
+]

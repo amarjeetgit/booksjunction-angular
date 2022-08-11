@@ -1,89 +1,117 @@
-
 <app-header></app-header>
-<div style="margin-left: 100px;margin-right: 20px;">
-<div  class="col-sm-6 col-6 col-lg-4 col-xl-4 list-product"  *ngFor="let data of result;">
-      <app-product-card [item]=data>
+<div class="container">
+  <div class="row w-100 filter-header">
+    <!-- <div class="col-lg-4" style="">
+      <div [ngbNavOutlet]="nav"></div>
+    </div> -->
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <div ngbDropdown style="width: max-content;height: 100px;" class="">
+        <ul ngbNav #nav="ngbNav" class="nav-tabs" style="flex-wrap: nowrap;">
+          <li ngbNavItem>
+            <a href="" (click)="check()" ngbNavLink>Price High to Low</a>
+          </li>
+          <li ngbNavItem>
+            <a (click)="check()" ngbNavLink>Price Low to High</a>
+          </li>
+          <li ngbNavItem>
+            <a (click)="check1()" ngbNavLink>Rating</a>
+          </li>
+          <li ngbNavItem>
+            <a (click)="check2()" ngbNavLink>By Name Ascending</a>
+          </li>
+          <li ngbNavItem>
+            <a (click)="check3()" ngbNavLink>By Name Descending</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class=" row w-100">
+    <div class="panel-left col-md-3 col-lg-3" style="background-color: rgb(241, 241, 241);">
+      <br>
+      <h2>Filters</h2>
+      <br>
+      <div class="form-check">
+        <h4>
+          Brands
+        </h4>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox0
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox1
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox2
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox3
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox4
+        </label>
+      </div>
+      <br><br>
+      <div class="form-check">
+        <h4>
+          Categories
+        </h4>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox0
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox1
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox2
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox3
+        </label><br>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Default checkbox4
+        </label>
+      </div>
+    </div>
+    <div class="panel-right col-md-9 col-lg-9" style="margin-left: 10px;">
+      <div class="list-product" *ngFor="let data of result;">
+        <app-product-card [item]=data>
 
-      </app-product-card>
-</div>
-</div>
-<!-- <div style="margin-left: 20%;height: auto;width: 60%" class="row">
-      <div class="col-4"> 
-            <div class="row">
-                <div class="col-12">
-                  Picture Here
-                </div>
-                
-              </div>
-              <div class="row">
-                  <div class="col-6">
-                    Book Name
-                    </div>
-                    <div class="col-6">
-                        BookPrice
-                        </div>
-                  </div><br>
-                  
-                  
-                  <div class="row">
-                      <div class="col-6">
-                       <button (click)='invalid()'>Add to WishList</button>
-                        </div>
-                        <div class="col-6">
-                            <button (click)='invalid()'>Add to Cart</button>
-                            </div>
-                      </div>
-       </div>
-       <div class="col-4"> 
-          <div class="row">
-              <div class="col-12">
-                Picture Here
-              </div>
-              
-            </div>
-            <div class="row">
-                <div class="col-6">
-                  Book Name
-                  </div>
-                  <div class="col-6">
-                      BookPrice
-                      </div>
-                </div><br>
-                
-                
-                <div class="row">
-                    <div class="col-6">
-                     <button (click)='invalid()'>Add to WishList</button>
-                      </div>
-                      <div class="col-6">
-                          <button (click)='invalid()'>Add to Cart</button>
-                          </div>
-                    </div>
-     </div>
-     <div class="col-4"> 
-        <div class="row">
-            <div class="col-12">
-              Picture Here
-            </div>
+        </app-product-card>
+        <div class="buttons">
+          <table>
+            <tr class="row" style="width: 250px;">
+              <td class="col-6" style="text-align: right;">
+                <button class="btn shadow-none" style="height: 50px;width: 115px;background-color: white;outline: none;"
+                  (click)='invalid()'>
+                  <img *ngIf="!wishlisted" style="text-align: center;" class="wishlisticon"
+                    src="assets/pictures/pngfind.com-love-symbols-png-248074.png">
+                  <img *ngIf="wishlisted" style="text-align: center;" class="wishlisticon"
+                    src="assets/pictures/heart_red.png">
+                </button>
+                <!-- <button class="btn btn-primary" (click)='invalid()'>
             
-          </div>
-          <div class="row">
-              <div class="col-6">
-                Book Name
-                </div>
-                <div class="col-6">
-                    BookPrice
-                    </div>
-              </div>
-              <br>
-              
-              <div class="row">
-                  <div class="col-6">
-                   <button (click)='invalid()'>Add to WishList</button>
-                    </div>
-                    <div class="col-6">
-                        <button (click)='invalid()'>Add  to  Cart</button>
-                        </div>
-                  </div>
-   </div>
-</div> -->
+          </button> -->
+              </td>
+              <td class="col-6"><button class="btn btn-success" style="height: 50px;width: 125px;">
+                  <a style="color:white" (click)='invalid()' href="">Add to Cart</a>
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
